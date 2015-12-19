@@ -1,0 +1,12 @@
+jenkins:
+    build: docker-jenkins/.
+    ports:
+        - "8080:8080"
+    links:
+        - gitlab
+gitlab:
+    image: gitlab/gitlab-ce
+    ports:
+        - "32080:80"
+        - "32022:22"
+        - "32443:443"

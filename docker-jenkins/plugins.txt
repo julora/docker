@@ -1,0 +1,4 @@
+robot:latest
+git:latest
+git-client:latest
+scm-api:latest

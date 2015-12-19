@@ -1,0 +1,7 @@
+*** Settings ***
+Library  Selenium2Library
+
+*** Test Cases ***
+Mache Screenshot von Google Homepage
+    Open Browser  www.google.de
+    Capture Page Screenshot
