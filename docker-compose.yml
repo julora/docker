@@ -1,9 +1,5 @@
 data:
-    build: docker-data/.
-    volumes:
-        - /c/Users/Julian/Desktop/docker-data/gitlab/conf:/etc/gitlab
-        - /c/Users/Julian/Desktop/docker-data/gitlab/logs:/var/log/gitlab
-        - /c/Users/Julian/Desktop/docker-data/gitlab/data:/var/opt/gitlab
+    image: julora/data
 jenkins:
     image: julora/jenkins
     ports:
@@ -21,5 +17,3 @@ gitlab:
         - "32080:80"
         - "32022:22"
         - "32443:443"
-    volumes_from:
-        - data
