@@ -24,4 +24,4 @@ VOLUME /robot/
 COPY robot/* /robot/
 RUN mkdir /scripts/
 COPY robot.sh /scripts/
-ENTRYPOINT /scripts/robot.sh
+CMD /scripts/robot.sh

@@ -5,7 +5,10 @@ export DISPLAY=":1"
 Xvfb :1 -screen 0 1280x1024x24 &
 
 # goto work directory
-cd /robot/
+if [ -n "$1" ]
+    then cd /robot/
+    else cd $1
+fi
 
 # run video grabber, save pid of video grab command (run in background)
 avconv -y -f x11grab -r 25 -s 1280x1024 -i :1.0 selenium.mp4 &
